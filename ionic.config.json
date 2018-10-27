@@ -1,0 +1,7 @@
+{
+  "name": "dice",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
