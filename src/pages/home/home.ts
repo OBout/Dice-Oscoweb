@@ -11,4 +11,9 @@ export class HomePage {
 
   }
 
+  roll () {
+    const randomdice=Math.round(Math.random()*5);
+    alert (randomdice)
+  }
+
 }
