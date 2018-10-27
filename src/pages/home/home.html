@@ -1,9 +1,46 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Roll The Dice</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="roll()"></button>
+  <div class="center-div" *ngIf="shakability === false">
+    <br>
+    <button ion-button (click)="roll()">* roll *</button>
+    <br>
+  </div>
+  <div *ngIf="shakability !== false">
+    <br>
+    <h2 class="center-div">Shake it!</h2>
+    <p class="center-div">Like a polaroid picture</p>
+    <br>
+  </div>
+  <ion-card>
+    <ion-card-content>
+      <div class="center-div">
+        <img src="../../assets/imgs/d{{dice(1)}}.gif">
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <div class="center-div">
+        <img src="../../assets/imgs/d{{dice(2)}}.gif">
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="rolls > 0">
+    <ion-card-header>
+      <ion-card-title>
+        <span class="{{class}}">
+          Rolls: {{rolls}}
+        </span>
+        <hr>
+        <span class="{{class}}">
+          Score: {{score}}
+        </span>
+      </ion-card-title>
+    </ion-card-header>
+  </ion-card>
 </ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      High Score
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      Score
+    </ion-col>
+    <ion-col>
+      Name
+    </ion-col>
+  </ion-row>
+  <hr>
+  <ion-row *ngFor="let item of items | async">
+    <ion-col>
+      {{item.Score}}
+    </ion-col>
+    <ion-col>
+      {{item.Name}}
+    </ion-col>
+  </ion-row>
+
+</ion-content>
