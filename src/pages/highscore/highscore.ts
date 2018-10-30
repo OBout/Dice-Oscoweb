@@ -22,8 +22,6 @@ export class HighscorePage {
     public navCtrl: NavController,
     private db: AngularFirestore
   ) {
-
     this.items = db.collection<ScoreItem>('items').valueChanges();
-
   }
 }
